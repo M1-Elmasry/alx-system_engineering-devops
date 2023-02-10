@@ -5,4 +5,7 @@
 ## print current user
 
 # 2-groups
-## print all groups related to current user 
+## print all groups related to current user
+
+# 3-new_owner
+## change hello file from it owner to betty  
