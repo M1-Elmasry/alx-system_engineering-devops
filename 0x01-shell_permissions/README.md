@@ -8,4 +8,7 @@
 ## print all groups related to current user
 
 # 3-new_owner
-## change hello file from it owner to betty  
+## change hello file from it owner to betty
+
+# 4-empty 
+## create create an empty file called hello   
