@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -lR | find * -type f -regex "[a-zA-Z].js" -delete
