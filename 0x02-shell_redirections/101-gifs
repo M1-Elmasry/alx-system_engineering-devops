@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -lRa | find -type f -name "*.gif" | cut -d. -f 1 | LC_ALL=C sort -k 1.1f,1.1
