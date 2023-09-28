@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# format ls output
+
+for i in $(ls)
+do 
+  echo "$i" | rev | cut --delimiter="-" --fields=1 | rev
+done
