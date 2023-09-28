@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# print "Best School" 10 times, print "Hi" at 9th iteration
+
+c=1
+while [[ $c -le 20 ]];
+do
+  case $c in
+    4) echo -e "$c\nbad luck from China" ;;
+    9) echo -e "$c\nbad luck from Japan" ;;
+    17) echo -e "$c\nbaf luck from Italy" ;;
+    *) echo "$c" ;;
+  esac 
+  ((c++))
+done
