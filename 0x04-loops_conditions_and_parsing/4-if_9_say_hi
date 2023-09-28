@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# print "Best School" 10 times, print "Hi" at 9th iteration
+
+c=0
+while [[ $c -lt 10 ]];
+do
+  if [[ $c = 8 ]]
+  then
+    echo "Hi"
+  else
+    echo "Best School"
+  fi
+  ((c++))
+done
