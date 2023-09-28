@@ -2,7 +2,7 @@
 # print "Best School" 10 times with while loop
 
 c=0
-while [[ $c -lt 5 ]];
+while [[ $c -lt 10 ]];
 do
   echo "Best School"
   ((c++))
