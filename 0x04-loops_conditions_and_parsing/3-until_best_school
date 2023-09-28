@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# print "Best School" 10 times using until
+
+c=0
+until [[ $c -ge 10 ]];
+do
+  echo "Best School"
+  ((c++))
+done
