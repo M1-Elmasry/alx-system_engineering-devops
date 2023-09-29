@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# show current shell pid in custom format
+
+for i in $(pgrep bash); do 
+  echo "$i bash"
+done
