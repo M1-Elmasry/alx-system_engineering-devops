@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# print /etc/passwd formated
+
+while IFS=":" read -r user _ id _ _ homeDir _
+do
+  echo "${user}:${id}:${homeDir}"
+
+done < "/etc/passwd"
