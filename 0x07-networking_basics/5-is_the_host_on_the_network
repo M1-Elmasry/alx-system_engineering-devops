@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # pings an IP address
 
-filename=$0
+filename=$(basename -- "$0")
 IP=$1
 
 if ! [ "${IP}" ]; then
