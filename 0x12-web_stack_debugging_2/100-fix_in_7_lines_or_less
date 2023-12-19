@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# do a fuckin bad thing
 sed -i 's/user .*;/user nginx;/g' /etc/nginx/nginx.conf
 sed -i 's/listen 80;/listen 8080;/g' /etc/nginx/sites-available/default
 chmod 644 /etc/nginx/nginx.conf
