@@ -5,7 +5,6 @@ from jsonplaceholder.typicode.com
 """
 import requests
 from sys import argv
-from csv import writer as csv_writer
 
 URL = "https://jsonplaceholder.typicode.com"
 
@@ -24,24 +23,28 @@ def fetch_data(endpoint, *query_params):
 
 if __name__ == "__main__":
     try:
-        employee_id = int(argv[1])
+        empl_id = int(argv[1])
     except ValueError:
         exit(-1)
 
-    employee_username = fetch_data("users", f"id={employee_id}")[0].get("username")
+    employee_usrname = fetch_data("users", f"id={empl_id}")[0].get("username")
 
-    employee_all_todos = fetch_data("todos", f"userId={employee_id}")
+    employee_all_todos = fetch_data("todos", f"userId={empl_id}")
 
-    filename = f"{employee_id}.csv"
+    filename = f"{empl_id}.csv"
 
-    with open(filename, mode="w", newline="") as file:
-        writer = csv_writer(file)
+    with open(filename, mode="w", newline="\n") as file:
+
         for todo in employee_all_todos:
-            writer.writerow(
+            line = ",".join(
                 [
-                    employee_id,
-                    employee_username,
-                    f"{todo.get('completed')}",
-                    f"{todo.get('title')}",
+                    f"\"{empl_id}\"",
+                    f"\"{employee_usrname}\"",
+                    f"\"{todo.get('completed')}\"",
+                    f"\"{todo.get('title')}\"",
                 ]
             )
+
+            line += "\n"
+
+            file.write(line)
