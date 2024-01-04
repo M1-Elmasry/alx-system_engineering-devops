@@ -3,9 +3,9 @@
 fetch information
 from jsonplaceholder.typicode.com
 """
+import json
 import requests
 from sys import argv
-import json
 
 URL = "https://jsonplaceholder.typicode.com"
 
