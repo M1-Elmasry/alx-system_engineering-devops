@@ -1,11 +1,6 @@
-# fix the server bug
+# fix server's bug
 
-exec { 'update the settings file':
+exec { 'update settings file':
         provider => 'shell',
-        command  => 'sed -i "s/phpp/php/" /var/www/html/wp-settings.php',
-}
-
-exec { 'restart apache2 service':
-        provider => 'shell',
-        command  => 'service apache2 restart',
+        command  => 'sed -i "s/phpp/php/" /var/www/html/wp-settings.php && service apache2 restart'
 }
